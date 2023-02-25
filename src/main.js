@@ -119,17 +119,21 @@ var companiesLengthDiff = companies.length - oldCompaniesLength
 var recruitersLengthDiff = recruiters.length - oldRecruitersLength
 var jobsLengthDiff = jobs.length - oldJobsLength
 
+var textToAlert = ""
+
 if (companiesLengthDiff > 0) {
-    alert((companiesLengthDiff > 1) ? `${companiesLengthDiff} companies added!` : `${companiesLengthDiff} company added!`)
+    textToAlert += (companiesLengthDiff > 1) ? `${companiesLengthDiff} companies added!\n` : `${companiesLengthDiff} company added!\n`
     console.log(companies)
 }
 
 if (recruitersLengthDiff > 0) {
-    alert((recruitersLengthDiff > 1) ? `${recruitersLengthDiff} recruiters added!` : `${recruitersLengthDiff} recruiter added!`)
+    textToAlert += (recruitersLengthDiff > 1) ? `${recruitersLengthDiff} recruiters added!\n` : `${recruitersLengthDiff} recruiter added!\n`
     console.log(recruiters)
 }
 
 if (jobsLengthDiff > 0) {
-    alert((jobsLengthDiff > 1) ? `${jobsLengthDiff} jobs added!` : `${jobsLengthDiff} job added!`)
+    textToAlert +=(jobsLengthDiff > 1) ? `${jobsLengthDiff} jobs added!\n` : `${jobsLengthDiff} job added!\n`
     console.log(jobs)
 }
+
+if(textToAlert.length > 0) alert(textToAlert)
