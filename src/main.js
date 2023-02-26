@@ -2,10 +2,46 @@ if (!companies) var companies = []
 if (!recruiters) var recruiters = []
 if (!jobs) var jobs = []
 
-var hirersCards = document.querySelectorAll("div.hirer-card__container") // to get hirer info
-var entityCards = document.querySelectorAll("div.entity-result") // to get entities info
-var companyCards = document.querySelectorAll("div.job-card-container") // to get company info
-var jobsDetails = document.querySelectorAll("div.jobs-details__main-content") // to get both job and hirer info
+// links selectors
+var urlSelector = "a.app-aware-link"
+var jobUrlSelector = "a.ember-view"
+var jobCompanyUrlSelector = ".job-card-container__company-name"
+
+// entity selectors
+var entitySelector = "div.entity-result"
+var curEntityTitleSelector = ".entity-result__title-line" // title|jobs, name|products, name|companies, name, connDegree|people
+var entitySubtitleSelector = ".entity-result__primary-subtitle" // company|jobs, category|products, category|companies, title|people
+var entitySecondarySubtitleSelector = ".entity-result__secondary-subtitle" // location and workplace type|jobs, owner|products, followers|people, location|people
+var entitySummarySelector = ".entity-result__summary" // description|products, description|companies, description|groups
+var entityButtonActionSelector = ".artdeco-button"
+
+// job details selectors
+var jobDetailsSelector = "div.jobs-details__main-content"
+var jobDetailsTitleSelector = ".jobs-unified-top-card__job-title"
+var jobCompanySelector = ".jobs-unified-top-card__company-name"
+var jobLocationSelector = ".jobs-unified-top-card__bullet"
+var jobWorkplaceTypeSelector = ".jobs-unified-top-card__workplace-type"
+var jobDescriptionSelector = ".jobs-description__container"
+var jobInsightSelector = "div.mt1"
+var jobLevelSelector = "li.jobs-unified-top-card__job-insight"
+
+// job selectors
+var jobSelector = "div.job-card-container"
+var jobTitleSelector = "a.job-card-list__title"
+var companyNameSelector = ".job-card-container__company-name"
+var jobMetadataSelector = ".job-card-container__metadata-item"
+var jobWorkplaceTypeMetadataSelector = ".job-card-container__metadata-item--workplace-type"
+
+// hirer selectors
+var hirerSelector = "div.hirer-card__container"
+var hirerNameSelector = ".jobs-poster__name"
+var hirerJobTitleSelector = ".hirer-card__hirer-job-title"
+var hirerConnDegreeSelector = ".hirer-card__connection-degree"
+
+var hirersCards = document.querySelectorAll(hirerSelector) // to get hirer info
+var entitiesCards = document.querySelectorAll(entitySelector) // to get entities info
+var jobsCards = document.querySelectorAll(jobSelector) // to get both job and company infos
+var jobsDetails = document.querySelectorAll(jobDetailsSelector) // to get both job and hirer info
 
 var oldCompaniesLength = companies.length
 var oldRecruitersLength = recruiters.length
