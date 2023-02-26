@@ -7,10 +7,10 @@ class Company {
 }
 
 class Recruiter {
-    constructor(name, profileUrl, description, connDegree, requestStatus) {
+    constructor(name, profileUrl, jobTitle, connDegree, requestStatus) {
         this.name = name
         this.profileUrl = profileUrl
-        this.description = description
+        this.jobTitle = jobTitle
         this.connDegree = connDegree
         this.requestStatus = requestStatus
     }
