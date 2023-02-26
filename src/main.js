@@ -22,8 +22,7 @@ for (let i = 0; i < companyCards.length; i++) {
 
     if (!comProfileUrl.includes("/company/")) continue
 
-    let comName = curCompany.querySelector("a.app-aware-link").innerText
-
+    let comName = curCompany.querySelector("a.app-aware-link") ? curCompany.querySelector("a.app-aware-link").innerText : curCompany.querySelector("a.job-card-container__company-name").innerText
     let comDescription = ""
 
     let curCompanyObj = new Company(comName, comProfileUrl, comDescription)
