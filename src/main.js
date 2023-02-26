@@ -105,7 +105,7 @@ for (let i = 0; i < entityCards.length; i++) {
         let jobCompany = curItem.querySelector("div.entity-result__primary-subtitle").innerText
         let secondarySubtitle = curItem.querySelector("div.entity-result__secondary-subtitle").innerText.split("(")
         let jobLocation = secondarySubtitle[0]
-        let jobWorkplaceType = secondarySubtitle.length >=2 ? secondarySubtitle[1].replace(")", "") : ""
+        let jobWorkplaceType = secondarySubtitle.length >= 2 ? secondarySubtitle[1].replace(")", "") : ""
         let jobDescription = ""
         let jobInsight = ""
 
@@ -133,8 +133,8 @@ if (recruitersLengthDiff > 0) {
 }
 
 if (jobsLengthDiff > 0) {
-    textToAlert +=(jobsLengthDiff > 1) ? `${jobsLengthDiff} jobs added!\n` : `${jobsLengthDiff} job added!\n`
+    textToAlert += (jobsLengthDiff > 1) ? `${jobsLengthDiff} jobs added!\n` : `${jobsLengthDiff} job added!\n`
     console.log(jobs)
 }
 
-if(textToAlert.length > 0) alert(textToAlert)
+if (textToAlert.length > 0) alert(textToAlert)
