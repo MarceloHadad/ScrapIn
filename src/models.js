@@ -17,7 +17,7 @@ class Recruiter {
 }
 
 class Job {
-    constructor(title, jobUrl, company, location, workplaceType, description, insight) {
+    constructor(title, jobUrl, company, location, workplaceType, description, insight, level) {
         this.title = title
         this.jobUrl = jobUrl
         this.company = company
@@ -25,5 +25,6 @@ class Job {
         this.workplaceType = workplaceType
         this.description = description
         this.insight = insight
+        this.level = level
     }
 }

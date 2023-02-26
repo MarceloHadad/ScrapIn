@@ -58,8 +58,9 @@ for (let i = 0; i < jobsDetails.length; i++) {
     let jobWorkplaceType = curJob.querySelector("span.jobs-unified-top-card__workplace-type") ? curJob.querySelector("span.jobs-unified-top-card__workplace-type").innerText : ""
     let jobDescription = curJob.querySelector("div.jobs-description__content").innerText
     let jobInsight = curJob.querySelector("div.mt1") ? curJob.querySelector("div.mt1").innerText : ""
+    let jobLevel = curJob.querySelector("li.jobs-unified-top-card__job-insight").innerText.split(" · ") ? curJob.querySelector("li.jobs-unified-top-card__job-insight").innerText.split(" · ")[1] : ""
 
-    let curJobObj = new Job(jobTitle, jobUrl, jobCompany, jobLocation, jobWorkplaceType, jobDescription, jobInsight)
+    let curJobObj = new Job(jobTitle, jobUrl, jobCompany, jobLocation, jobWorkplaceType, jobDescription, jobInsight, jobLevel)
 
     if (!jobs.some(x => JSON.stringify(x) === JSON.stringify(curJobObj))) jobs.push(curJobObj)
 }
